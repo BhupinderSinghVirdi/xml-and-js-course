@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>​
+<members>
+    <member>​
+        <introduction> Hi, i am bhupinder singh virdi. I am a positive person and excited ro learn js</introduction>​
+        <hobbies>
+            <hobby> watching movies </hobby>​
+            <hobby> read blogs </hobby>
+            <hobby> outdoor sports </hobby>​​
+        </hobbies>
+    <member>
+</members>
+
+
+
+<!-- the same format can be used for making 10 members to the xml file. -->

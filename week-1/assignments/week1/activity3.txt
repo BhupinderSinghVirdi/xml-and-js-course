@@ -1,0 +1,2 @@
+when i drag and drop any xml file on excel the path of the file is pasted in the cell.
+-> attached the screenshot.
