@@ -7,8 +7,8 @@
   <!ELEMENT effectiveDate (#PCDATA)>
   <!ELEMENT menu (category, menuItem+)>
   <!ELEMENT category (#PCDATA)>
-  <!ELEMENT menuItem (itemName+,description,price,indicator+)>
-  <!ELEMENT itemName (originalName,oldName+)>
+  <!ELEMENT menuItem (itemName+,description,price,indicator*)>
+  <!ELEMENT itemName (originalName,oldName*)>
   <!ELEMENT originalName (#PCDATA)>
   <!ELEMENT oldName (#PCDATA)>
   <!ELEMENT description (#PCDATA)>
@@ -96,3 +96,7 @@
     </menuItem>
   </menu>
 </menuInfo>
+
+<!--
+  Name: Bhupinder Singh Virdi   Student#: N01435365
+-->
