@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>
+            Activity - Week5
+        </Title>
+        <script language="JavaScript">
+            function test(event){
+                event.preventDefault();
+
+                const data = event.target
+
+                const textIn = data.inputbox;
+                const time = data.radio;
+                const type = data.checkbox;
+                const inputValue = textIn.value;
+                const render = {'time':time.value, 'data' : inputValue}
+                console.log(render);
+
+                textIn.value = "";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Activity - Week5</h1>
+        <p> Please enter your last food you had </p>
+        <form onsubmit= "return test(event)" action="" method="get">
+            <input type="text" name="inputbox" value="" required />
+            <br>
+            <input type="radio" id="Night" name="radio" value="Night">
+            <label for="html">Night</label><br>
+            <input type="radio" id="noon" name="radio" value="noon">
+            <label for="html">Noon</label><br>
+            <input type="radio" id="Day" name="radio" value="Day">
+            <label for="html">Day</label><br>
+
+            <input type="checkbox" id="hot" name="hot" value="hot">
+            <label for="hot">hot</label><br>
+            <input type="checkbox" id="spicy" name="spicy" value="spicy">
+            <label for="hot">spicy</label><br>
+            <button type="submit" onsubmit=""> ok </button>
+        </form>
+    </body>
+</html>
