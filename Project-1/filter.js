@@ -64,7 +64,7 @@ if (withFilters) {
     inputControl.value = input;
 
     console.log(nodes)
-    const filteredForm = nodes.filter((obj)  => document.getElementsByTagName('name').includes(input));
+    const filteredForm = nodes.filter((obj)  => nodes.getElementsByTagName('name')[0].includes(input));
 
     filteredForm.map((personNode) =>
         table.appendChild(htmlToElement(generateTableRow(personNode)))
