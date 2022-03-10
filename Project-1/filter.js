@@ -60,17 +60,11 @@ const withFilters = Boolean(window.location.search);
 if (withFilters) {
     const params = new URLSearchParams(window.location.search);
     const input = params.get(`input_value`);
-    console.log("input:"+input);
     const inputControl = document.getElementById(`input_value`);
     inputControl.value = input;
-    console.log(inputControl.value)
 
     console.log(nodes)
     const filteredForm = nodes.filter((obj)  => document.getElementsByTagName('name').includes(input));
-
-    console.log(filteredForm)    
-    //data = nodes.filter(({ name }) => name.toLowerCase().includes(nameTerm));
-    //console.log(data)
 
     filteredForm.map((personNode) =>
         table.appendChild(htmlToElement(generateTableRow(personNode)))
