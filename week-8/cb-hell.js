@@ -2,54 +2,63 @@
  * 1. Replace regular functions with arrow functions
  * 2. Fix callback hell by rewriting it with async/await
  * 3. Make sure the "Finish" is logged after all the data is converted
- */
+ */ 
 
-function timeout(ms, callback) {
-  return new Promise(function (resolve) {
-    setTimeout(function () {
+
+const timeout = async (ms,callback) => {
+  return new Promise ((resolve) => {
+    setTimeout = (ms) => {
       resolve();
       callback();
-    }, ms);
+    }
   });
 }
 
-function generateRandomNumber() {
-  return Math.floor(Math.random() * 40);
+const generateRandomNumber = () => {
+  return Math.floor(Math.random()* 40)
 }
 
-function generateData(callback) {
-  timeout(1000, function () {
-    const data = Array.from({ length: 20 }, generateRandomNumber);
+
+
+const generateData = async (callback) => {
+  await timeout(1000, () =>{
+    const data = Array.from( {length: 20}, generateRandomNumber )
     callback(data);
-  });
+    console.log(callback)
+  })
 }
 
-function convertToFeet(meters, callback) {
+
+const convertToFeet = async (meters, callback) => {
   const feet = meters * 3.2808;
-  timeout(3500, function () {
+   await timeout(3500, () => {
     callback(feet);
   });
 }
 
-function processData(data, callback) {
-  data.map(function (value) {
+
+const processData =  (data, callback) => {
+  data.map( (value) => {
     callback(value);
-  });
+  })
 }
 
-function logResult(meters, feet) {
-  console.log(`Converted ${meters}m to ${feet}ft`);
+const logResult = () =>{
+  console.log(`Converted ${meters}m to ${feet}ft`)
 }
+
 
 function main() {
   console.log("Start");
-  generateData(function (data) {
-    processData(data, function (value) {
-      convertToFeet(value, function (result) {
+  generateData((data) => {
+    processData(data, (value) => {
+      convertToFeet(value, (result) => {
         logResult(value, result);
       });
     });
   });
+
+
   console.log("Finish");
 }
 
