@@ -25,7 +25,7 @@ const renderTable = (xmlData) => {
     const nodes = Array.from(xmlData.documentElement.childNodes).filter(
       ({ nodeName }) => nodeName === `person`
     );
-  
+   
     nodes.map((personNode) =>
       table.appendChild(htmlToElement(generateTableRow(personNode)))
     );
