@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Test Input</title>
+  </head>
+  <body>
+    <h1>Final Project 2</h1>
+    <h2>This project is created by Bhupinder Singh Virdi with Student# : N01435365</h2>
+    <form id="form" onsubmit="onSubmit(event)" onreset="onReset()">
+      <input
+        type="text"
+        name="inputfield"
+        id="inputfield-term"
+        placeholder="Enter any field: like country, city or Amount "
+      />
+      <button type="submit">Apply filters</button>
+      <button type="reset">Reset</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Amount</th>
+          <th>SIN</th>
+          <th>Street</th>
+          <th>City</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody id="table-body" class="bold" { border="bold"; style="background-color: aqua"}></tbody>
+    </table> 
+    <script type="text/javascript" src="./dist/bundle.js"></script>
+  </body>
+</html>
