@@ -14,5 +14,5 @@ Filter:
 - table contents can be filter using the text input given and reset by the reset button
 
 Deployment:
-- the netlify url for deployed project is:
+- the netlify url for deployed project is: https://relaxed-rolypoly-c98a44.netlify.app/
 
